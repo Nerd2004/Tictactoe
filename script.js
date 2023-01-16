@@ -33,13 +33,14 @@ check = () =>{
         if((box[e[0]].innerText === box[e[1]].innerText)&&(box[e[2]].innerText === box[e[1]].innerText)&&(box[e[0]].innerText !=="")){
             box.forEach(x => {
                 x.disabled = true;
-                variable = box[e[0]].innerText;    
+                  
         }) 
         draw(e[0],e[1],e[2],e[3],e[4],e[5]);
+        variable = box[e[0]].innerText;  
         }
 })
 }
-let variable ="A";
+let variable ='A';
 box.forEach(x => {
     x.onclick = () =>{
         x.innerText = curr;
