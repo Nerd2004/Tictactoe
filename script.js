@@ -1,6 +1,6 @@
 let curr='X';
 let box = document.querySelectorAll('.slot');
-let tur = document.getElementById('turn');
+let tur = document.getElementById('text');
 let reset = document.getElementsByClassName('buttons')[0];
 let count = 0;
 let wins=[
