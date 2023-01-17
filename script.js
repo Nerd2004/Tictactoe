@@ -3,6 +3,7 @@ let box = document.querySelectorAll('.slot');
 let tur = document.getElementById('turn');
 let reset = document.getElementsByClassName('buttons')[0];
 let variable ='A';
+let count = 0;
 let wins=[
     [0,1,2,0,11.5,0],
     [3,4,5,0,24,0],
@@ -14,6 +15,7 @@ let wins=[
     [2,4,6,-17,17,-45],
 ]
 reset.onclick = () =>{
+    count += 1;
     curr ='X';
     tur.innerText =` It's ${curr}'s Turn`;
     box.forEach(x => {
@@ -33,12 +35,11 @@ check = () =>{
     wins.forEach(e=>{
         if((box[e[0]].innerText === box[e[1]].innerText)&&(box[e[2]].innerText === box[e[1]].innerText)&&(box[e[0]].innerText !=="")){
             box.forEach(x => {
-                x.disabled = true;
-                  
+                x.disabled = true;       
         }) 
         draw(e[0],e[1],e[2],e[3],e[4],e[5]);
         variable = box[e[0]].innerText;  
-        }
+        if(count == 9 && variable == 'A') tur.innerText = "DRAW";
 })
 }
 
