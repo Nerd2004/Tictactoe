@@ -60,6 +60,7 @@
     width:28vh;
     display:flex;
     align-items: center;
+    position:relative;
     justify-content: center;
     font-size:3vh;
     color:aquamarine;
@@ -71,6 +72,38 @@
     border-radius:1vh;
     z-index:1;
     animation: roll .3s linear;
+}
+#turn span{
+        width:100%;
+        height:100%;
+        background:black;
+        /* box-shadow: 0 0 20px black; */
+        z-index:10;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        border:1px solid #0f0a29;
+}
+#turn:before,
+#turn:after{
+        content:'';
+        inset:0;
+        background:#f00;
+        transition:0.5s;
+      }
+#turn:before,
+#turn:after{
+  content:'';
+  position: absolute;
+  background: linear-gradient(45deg,#00ccff,#0e1538,#d400d4);
+  inset:-2px;
+}
+#turn:hover:before{
+    inset:-3px;
+}
+#turn:hover:after{
+    inset:-3px;
+    filter: blur(20px);
 }
 @keyframes roll {
 	from {
@@ -116,7 +149,5 @@
     100%{
         background-position:400%;
     }
-}
-
 
 
