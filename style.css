@@ -98,19 +98,14 @@
     border-radius :50px;
     border:none;
     outline:none;
-    background:#111;
+    /* background:#111; */
     color:#fff;
     font-size:20px;
     letter-spacing:2px;
     text-transform:uppercase;
     cursor:pointer;
-}
-.buttons:hover{
     background:linear-gradient(90deg,#03a9f4 , #f441a5, #ffeb3b, #03a9f4);
     background-size:400%;
-    
-}
-.buttons:hover{
     z-index:1;
     animation:glow 8s linear infinite;
 }
