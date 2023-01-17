@@ -2,6 +2,7 @@ let curr='X';
 let box = document.querySelectorAll('.slot');
 let tur = document.getElementById('turn');
 let reset = document.getElementsByClassName('buttons')[0];
+let variable ='A';
 let wins=[
     [0,1,2,0,11.5,0],
     [3,4,5,0,24,0],
@@ -40,7 +41,7 @@ check = () =>{
         }
 })
 }
-let variable ='A';
+
 box.forEach(x => {
     x.onclick = () =>{
         x.innerText = curr;
